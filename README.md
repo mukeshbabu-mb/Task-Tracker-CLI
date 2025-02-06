@@ -23,7 +23,7 @@ You can use any programming language to build this project.
 - Ensure to handle errors and edge cases gracefully.
 ## Example
 The list of commands and their usage is given below:
-'''
+'''java
 # Adding a new task
 task-cli add "Buy groceries"
 # Output: Task added successfully (ID: 1)
