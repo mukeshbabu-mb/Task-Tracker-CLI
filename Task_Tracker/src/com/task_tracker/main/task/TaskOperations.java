@@ -63,15 +63,23 @@ public class TaskOperations extends Database {
 	//Mark a Task In-Progress
 	public void inProgress(int id) {
 		Task task = findTask(id);
-		task.setStatus("IN-PROGRESS");
-		System.out.println(GREEN+"---- Status Updated Successfully ----"+END);
+		if(task!=null) {
+			task.setStatus("IN-PROGRESS");
+			System.out.println(GREEN+"---- Status Updated Successfully ----"+END);
+		}else {
+			System.out.println(RED+"---- Task Id "+id+" Not Found ----"+END);
+		}
 	}
 	
 	//Mark a Task Done
 	public void done(int id) {
 		Task task = findTask(id);
-		task.setStatus("DONE");
-		System.out.println(GREEN+"---- Status Updated Successfully ----"+END);
+		if(task!=null) {
+			task.setStatus("DONE");
+			System.out.println(GREEN+"---- Status Updated Successfully ----"+END);
+		}else {
+			System.out.println(RED+"---- Task Id "+id+" Not Found ----"+END);
+		}
 	}
 	
 	// Find Task In Tasks List by Id Function
